@@ -1,0 +1,116 @@
+body 
+
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #b52b65; /* Pinkish purple */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #903c8e; /* Deep purple */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a458b7; /* Lighter purple on hover */
+}
+
+/* Add styles for the QR code container */
+#qr-code {
+    margin-top: 20px; /* Adjust spacing */
+    text-align: center; /* Center QR code */
+    position: relative; /* Position container for absolute positioning of logo */
+}
+
+/* Optional: Style for the generated QR code itself */
+#qr-code canvas {
+    width: 200px; /* Adjust the size of the QR code */
+    height: auto;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add styles for the logo */
+#qr-code img.logo {
+    position: absolute; /* Position the logo relative to the container */
+    top: 50%; /* Center the logo vertically */
+    left: 50%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Center the logo precisely */
+    max-width: 80px; /* Adjust the maximum width of the logo */
+    max-height: 80px; /* Adjust the maximum height of the logo */
+    z-index: 1; /* Ensure the logo appears above the QR code */
+}
+
+/* Add styles for the share buttons */
+#share-button-whatsapp,
+#share-button-line {
+    margin-top: 20px; /* Adjust spacing */
+    margin-bottom: 20px; /* Adjust spacing */
+    padding: 10px 20px;
+    background-color: #903c8e; /* Deep purple */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#share-button-whatsapp:hover,
+#share-button-line:hover {
+    background-color: #a458b7; /* Lighter purple on hover */
+}
+
+/* Color hashtags */
+.popup-content::before,
+.popup-content::after {
+    content: attr(data-content);
+    color: #ff69b4; /* Hot pink */
+    font-weight: bold; /* Make hashtags bold */
+}
+#picture-container {
+    margin-top: 20px; /* Adjust spacing */
+    text-align: center; /* Center the image */
+}
+
+#custom-image {
+    max-width: 200px; /* Adjust the maximum width of the image */
+    max-height: 200px; /* Adjust the maximum height of the image */
+}

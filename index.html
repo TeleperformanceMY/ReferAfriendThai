@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleperformance ID Link Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest"></script>
+</head>
+<body>
+
+<div class="popup-container">
+    <div class="popup-content" id="step1">
+        <h2>Enter your BMS Ident</h2>
+        <form id="id-form">
+            <label for="id">BMS Ident:</label>
+            <input type="text" id="id" name="id" required>
+            <button type="submit">Generate Link</button>
+        </form>
+    </div>
+
+    <div class="popup-content" id="step2" style="display: none;">
+        <h2>Thank you for referring a friend!</h2>
+        <p>As we grow into Thailand, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.</p>
+        <div id="generated-link"></div>
+        <div id="generated-link"></div>
+        <!-- Add buttons to share link via WhatsApp and Line -->
+        <button id="share-button-whatsapp">Share via WhatsApp</button>
+        <button id="share-button-line">Share via Line</button>
+ 
+        <div id="qrBox">
+            <img src="" id="qrImg">
+        </div>
+        <button onclick="generateQrCode()">or have your friend scanning this code above!</button>
+        <p>Thank you for referring a friend!</p>
+        <p>As we grow into Thailand, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.</p>
+     
+        <div id="picture-container">
+            <img src="Images/MicrosoftTeams-imag.png" alt="Description of the image">
+        </div>
+        <p>The Talent Attraction Team</p>
+      
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
