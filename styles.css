@@ -15,11 +15,18 @@ body
 }
 
 .popup-content {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
     text-align: center;
+        display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; 
+
+    
 }
 
 h2 {
@@ -108,9 +115,46 @@ button:hover {
 #picture-container {
     margin-top: 20px; /* Adjust spacing */
     text-align: center; /* Center the image */
+    position: relative;
+}
+#picture-container img {
+    width: 200px; /* Set the width to match the QR code size */
+    height: 200px; /* Set the height to match the QR code size */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 #custom-image {
     max-width: 200px; /* Adjust the maximum width of the image */
     max-height: 200px; /* Adjust the maximum height of the image */
 }
+/* CSS for logo container */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the logo appears above other content */
+}
+
+.logo-container img {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto;
+
+}
+/* Adjustments for other elements */
+.popup-container {
+    position: relative;  /* Ensure the logo container is positioned relative to this container */
+    z-index: 1; /* Ensure other content appears above the logo */
+}
+
+.additional-logo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transform: scale(0.2); /* Scale down */
+    margin-top: 20px; 
+}
+ 
+
