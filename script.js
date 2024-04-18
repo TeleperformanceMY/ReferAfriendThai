@@ -42,10 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
     shareButtonLine.addEventListener("click", function() {
         const link = generatedLink.textContent;
         const message = `Check out this link: ${link}`;
-
-        // Display the shareable message to the user
-        alert("Please copy the message below and paste it into the LINE app to share:\n\n" + message);
+    
+        // Create a shareable link for LINE
+        const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
+    
+        // Open LINE share link in a new window
+        window.open(lineLink, "_blank");
     });
+    
 
     function generateQrCode(link) {
         // Check if the input field is empty
